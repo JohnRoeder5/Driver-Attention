@@ -18,8 +18,6 @@ import pickle
 from datetime import datetime, date
 import datetime
 import matplotlib.pyplot as plt
-import keras_cv
-import keras_core
 import os
 import cv2
 import keras
@@ -43,17 +41,26 @@ from keras.layers import Input, Conv2D, MaxPooling2D, AveragePooling2D, Dropout,
 
 
 def makeBlocks(input_layer, f1, f2_conv1, f2_conv3, f3_conv1, f3_conv5, f4): 
-    path1 = Conv2D(filters=f1,  kernel_size=(1, 1) ,padding='same', activation='relu')(input_layer)
-    
-    path2= Conv2D(filters=f2_conv1,  kernel_size=(1, 1) ,padding='same', activation='relu')(input_layer)
-    path2= Conv2D(filters=f2_conv3,  kernel_size=(3, 3) ,padding='same', activation='relu')(path2)
+    path1 = Conv2D(filters=f1, kernel_size=(1, 1), padding='same', activation='relu')(input_layer)
 
-    path3 = Conv2D(filters=f3_conv1,  kernel_size=(1, 1) ,padding='same', activation='relu')(input_layer)
-    path3 = Conv2D(filters=f3_conv5,  kernel_size=(5, 5) ,padding='same', activation='relu')(path3)
+    path2 = Conv2D(filters=f2_conv1, kernel_size=(3, 3), padding='same', activation='relu')(input_layer)
+    path2 = Conv2D(filters=f2_conv3, kernel_size=(3, 3), padding='same', activation='relu')(path2)
+
+    path3 = Conv2D(filters=f3_conv1, kernel_size=(1, 1), padding='same', activation='relu')(input_layer)
+    path3 = Conv2D(filters=f3_conv5, kernel_size=(5, 5), padding='same', activation='relu')(path3)
 
     path4 = MaxPooling2D((3, 3), strides=(1, 1), padding='same')(input_layer)
-    path4 = Conv2D(filters=f4,  kernel_size=(1, 1) ,padding='same', activation='relu')(path4)
+    path4 = Conv2D(filters=f4, kernel_size=(1, 1), padding='same', activation='relu')(path4)
 
-    outputLayer = concatenate([path1, path2, path3, path4], axis =1)
+    print("Shapes before concatenation:")
+    print("Path 1:", path1.shape)
+    print("Path 2:", path2.shape)
+    print("Path 3:", path3.shape)
+    print("Path 4:", path4.shape)
+
+    outputLayer = concatenate([path1, path2, path3, path4], axis=-1)
+
+    print("Shape after concatenation:", outputLayer.shape)
     
     return outputLayer
+
