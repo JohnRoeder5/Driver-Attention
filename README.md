@@ -6,14 +6,10 @@ Head over to this link and download the zip file: https://github.com/AleDel/deep
 
 From here you want to add in the models folder into this zip file directory
 
-So step one add: models/bvlc_googlenet.caffemodel and models/deploy.prototxt to this zip files working directory.
+1. Install required Libraires
+2. download zip wiht trained model.
+3. resize your images that you want to be tested to 224X224 if needed (program should take care of it if you read in a "dataset of images").
+4. run the model in terminal.
 
-Step two: choose what image directory you want to train the model with: so make sure you have a folder with two test sets of data.....pictures--->c0,c1
-
-Step three data is trained (run imagesandModelProcess): now if you want to develop an output based on this you can do so, you can also play around with the settings of the model.
-
-If you want to single handedly see what is most likely attribute in an image... go to googlelet.py select the image you want to run and it should return what is most likely label.
-
-So far we are working on getting the exact output once the model is trained but we have it set up very nice now to train the model
 
 
