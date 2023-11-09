@@ -18,16 +18,13 @@ import pickle
 from datetime import datetime, date
 import datetime
 import matplotlib.pyplot as plt
-import keras_cv
-import keras_core
 import os
 import cv2
 import keras
 from keras.layers import Input, Conv2D, MaxPooling2D, AveragePooling2D, Dropout, Flatten, Dense, concatenate, GlobalAveragePooling2D
 from maketheBlocks import makeBlocks
-from imgPreprocess import imgProcess
-from keras.applications import ImageDataGenerator
-from tensorflow import Model
+from tensorflow.keras.models import Model
+
 
 
 def googleNetModelArchitecture():
