@@ -11,6 +11,6 @@ From here you want to add in the models folder into this zip file directory
 3. resize your images that you want to be tested to 224X224 if needed (program should take care of it if you read in a "dataset of images").
 4. run the model in terminal.
 
+TRAINED MODEL DATA:
 After the model has been run and trained here is the statistics behind the first training set with 10 epochs.
-
 ![image](https://github.com/Jborch1/FinalCapstoneDS/assets/122740699/0f7f8fce-ecf8-404b-81d0-ed0a32afe0e0)
