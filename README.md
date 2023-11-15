@@ -28,9 +28,13 @@ from datetime import datetime, date
 import matplotlib.pyplot as plt
 
 
-2. download zip with trained model.
-3. resize your images that you want to be tested to 224X224 if needed (program should take care of it if you read in a "dataset of images").
-4. run the model in terminal.
+![image](https://github.com/Jborch1/FinalCapstoneDS/assets/122740699/0d87c245-2315-43c6-abdd-1546028893ac)
+
+
+
+3. download zip with trained model.
+4. resize your images that you want to be tested to 224X224 if needed (program should take care of it if you read in a "dataset of images").
+5. run the model in terminal.
 
 TRAINED MODEL DATA:
 After the model has been run and trained here is the statistics behind the first training set with 10 epochs.
