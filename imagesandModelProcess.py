@@ -4,7 +4,8 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 import tensorflow as tf
-import googArchitecture 
+import googArchitecture
+import matplotlib as plt 
 # Import your googArchitecture module containing the model architecture
 # net = cv2.dnn.readNetFromCaffe('models/deploy.prototxt', 'models/bvlc_googlenet.caffemodel')
 
@@ -53,12 +54,25 @@ labels_encoded = label_encoder.fit_transform(labels)
 
 X_train, X_test, y_train, y_test = train_test_split(images, labels_encoded, test_size=0.2, random_state=42)
 
-CNN = googArchitecture.googleNetModelArchitecture()  # Use your actual function from the googArchitecture module
+CNN = googArchitecture.googleNetModelArchitecture()
 CNN.compile(loss=tf.keras.losses.SparseCategoricalCrossentropy(), optimizer=tf.keras.optimizers.Adam(learning_rate=0.001), metrics=['accuracy'])
 
-epochs = 100
+epochs = 10
 batchSize = 100
 history = CNN.fit(X_train, y_train, epochs=epochs, batch_size=batchSize, verbose=1, validation_split=0.2)
 
 loss = CNN.evaluate(X_test, y_test)
 print("Loss and Accuracy: ", loss)
+
+# Plotting the loss over epochs
+training_loss = history.history['loss']
+validation_loss = history.history['val_loss']
+
+# Plot training & validation loss values
+plt.plot(training_loss, label='Training Loss')
+plt.plot(validation_loss, label='Validation Loss')
+plt.title('Model loss over epochs')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend()
+plt.show()
