@@ -24,3 +24,7 @@ Shown below is an image of the model training with 10 epochs.
 This is our loss over epochs graph for the trained data and some of the results we have collected for our own model.
 ![image](https://github.com/Jborch1/FinalCapstoneDS/assets/122740699/931fe390-cb62-46c5-8d33-76b45e3452c1)
 
+
+With this model you are eligible to tune the stats in the googArchitecture file to fit what you are trying to do for your own project.
+
+For the case of our mini project we are doing predicitvie analysis in images so anyone wanting to do the same project in this field could use this model and tune the stats if need be.
