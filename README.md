@@ -1,6 +1,8 @@
 # Attention Detection CNN Model
 Repository for attention detection model aimed at predicting the state of a driver's attentiveness as either attentive or inattentive. Our Implementation is heavily inspired by the GoogeLeNet architecture for CNN's. link to that paper: https://arxiv.org/pdf/1409.4842.pdf
 
+Dataset found on Kaggle. Link to page with dataset:https://www.kaggle.com/competitions/state-farm-distracted-driver-detection/data
+
 Required: 
 Python 3.11.6
 TensorFlow 2.14
