@@ -37,11 +37,11 @@ import matplotlib.pyplot as plt
 5. run the model in terminal.
 
 TRAINED MODEL DATA:
-After the model has been run and trained here is the statistics behind the first training set with 10 epochs.
+Shown below is an image of the model training with 10 epochs. 
 ![image](https://github.com/Jborch1/FinalCapstoneDS/assets/122740699/0f7f8fce-ecf8-404b-81d0-ed0a32afe0e0)  
 
 
 
-This is our loss over epochs graph for the trained data when run and some of the results we have collected for our own model.
+This is our loss over epochs graph for the trained data and some of the results we have collected for our own model.
 ![image](https://github.com/Jborch1/FinalCapstoneDS/assets/122740699/931fe390-cb62-46c5-8d33-76b45e3452c1)
 
