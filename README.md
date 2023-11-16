@@ -4,7 +4,7 @@ Repository for attention detection model aimed at predicting the state of a driv
 Dataset found on Kaggle. Link to page with dataset:https://www.kaggle.com/competitions/state-farm-distracted-driver-detection/data
 
 Required: 
-Python 3.11.6
+Python 3.11.6, 
 TensorFlow 2.14
 
 1. Install required Libraires:
