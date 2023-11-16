@@ -27,9 +27,9 @@ datagen = ImageDataGenerator(rescale=1./255, validation_split=0.2)
 train_generator = datagen.flow_from_directory(
     data_directory,
     target_size=(224, 224),
-    batch_size=32,  # Adjust batch size as needed
+    batch_size=32, 
     class_mode='sparse',  # or 'categorical' if you have one-hot encoded labels
-    subset='training',  # Use training split
+    subset='training', 
     shuffle=True,
     seed=42
 )
@@ -37,7 +37,7 @@ train_generator = datagen.flow_from_directory(
 validation_generator = datagen.flow_from_directory(
     data_directory,
     target_size=(224, 224),
-    batch_size=32,  # Adjust batch size as needed
+    batch_size=32,  
     class_mode='sparse',  # or 'categorical' if you have one-hot encoded labels
     subset='validation',  # Use validation split
     shuffle=False,
