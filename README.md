@@ -22,7 +22,7 @@ TensorFlow 2.14
 2. resize your images that you want to be tested to 224X224 if needed (program should take care of it if you read in a "dataset of images". In order to do this set data_directory= to the file path for your images).
 3. run the model in terminal.
 
-TRAINED MODEL DATA + DIAGNOSTICS:
+# TRAINED MODEL DATA and Results
 Shown below is the trained model accuracy and loss graphs:
 ![image](https://github.com/Jborch1/FinalCapstoneDS/assets/122740699/f5abaf6c-aedc-41b5-8b17-e35534f332b1)
 
