@@ -1,3 +1,10 @@
+Colab Source Code:
+https://colab.research.google.com/drive/1gwqT2f7GYXrkmEj7ZQpDlxhCA6ExM6hg#
+
+
+
+
+
 # Attention Detection CNN Model
 Repository for attention detection model aimed at predicting the state of a driver's attentiveness as either attentive or inattentive. Our Implementation is heavily inspired by the GoogeLeNet architecture for CNN's. link to that paper: https://arxiv.org/pdf/1409.4842.pdf
 
